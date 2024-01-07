@@ -1,0 +1,28 @@
+function factorialize(num) {
+  if (num < 0 ) {
+    return;
+  } else if (num === 0) {
+    return 1;
+  } else {
+    return num * factorialize(num - 1);
+  }
+}
+
+factorialize(5);
+
+// n! = n * (n-1) * (n-2) * ... * 1
+// n! = 1 * 2 * 3 * ... * n
+// n! = n * (n - 1)!
+
+/* 
+
+MDN example:
+
+const factorial = (n) => {
+  if (n === 0) return 1
+  else return n * factorial(n - 1);
+};
+
+console.log(factorial(10));
+
+ */

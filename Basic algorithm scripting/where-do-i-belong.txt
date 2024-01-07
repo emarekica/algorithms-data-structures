@@ -1,0 +1,27 @@
+function getIndexToIns(arr, num) {
+  arr.sort((a, b) => a - b);
+
+  for (let i = 0; i < arr.length; i++) {
+    if(arr[i] >= num) {
+      return i;
+    }
+  }
+
+  return arr.length;
+}
+
+getIndexToIns([40, 60], 50);
+
+
+/* 
+
+1. The first thing to do is sort the array from lower to bigger, just to make the code easier. This is where sort comes in, it needs a callback function so you have to create it.
+
+2. Once the array is sorted, then just check for the first number that is bigger and return the index.
+
+3. If there is no index for that number then you will have to deal with that case too.
+
+First I sort the array using .sort(callbackFunction) to sort it by lowest to highest, from left to right.
+Then I use a for loop to compare the items in the array starting from the smallest one. When an item on the array is greater than the number we are comparing against, then we return the index.
+
+ */

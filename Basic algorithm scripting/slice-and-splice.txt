@@ -1,0 +1,25 @@
+function frankenSplice(arr1, arr2, n) {
+  // shalow copy of arr2
+  let arr2copy = arr2.slice();
+
+  for (let i = 0; i < arr1.length; i++) {
+    arr2copy.splice(n, 0, arr1[i]);
+    n++;
+  }
+
+  return arr2copy;
+}
+
+frankenSplice([1, 2, 3], [4, 5, 6], 1);
+
+/* 
+
+Using the slice() function we can create an exact replica of arr2 and assign the result of the operation to a variable, arr2copy.
+
+Now that we have an array that we can mutate on, we can iterate through every item in the first array. For each item in the first array we can use the splice() function to insert the item into index n of localArray.
+
+We increment the index n by one. This will ensure that every item from the arr1 is inserted into localArray in the proper index position.
+
+Finally, we return the localArray and end the function.
+
+ */
